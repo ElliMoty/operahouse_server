@@ -1,19 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
+<h2>
   <%= @event_space.name %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @event_space.location %>
-</p>
+</h2>
 
 <p>
   <strong>Capacity:</strong>
   <%= @event_space.capacity %>
 </p>
+
 
 <%= link_to 'Edit', edit_event_space_path(@event_space) %> |
 <%= link_to 'Back', event_spaces_path %>

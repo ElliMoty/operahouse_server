@@ -6,7 +6,6 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Location</th>
       <th>Capacity</th>
       <th colspan="3"></th>
     </tr>
@@ -16,7 +15,6 @@
     <% @event_spaces.each do |event_space| %>
       <tr>
         <td><%= event_space.name %></td>
-        <td><%= event_space.location %></td>
         <td><%= event_space.capacity %></td>
         <td><%= link_to 'Show', event_space %></td>
         <td><%= link_to 'Edit', edit_event_space_path(event_space) %></td>

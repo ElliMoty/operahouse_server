@@ -13,19 +13,20 @@
 
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_area :name %>
+    <%= form.text_field :name, :autofocus => true %>
   </div>
-
   <div class="field">
     <%= form.label :email %>
-    <%= form.text_area :email %>
+    <%= form.email_field :email, :required => true %>
   </div>
-
   <div class="field">
-    <%= form.label :password_digest %>
-    <%= form.text_area :password_digest %>
+    <%= form.label :password %>
+    <%= form.password_field :password, :required => true %>
   </div>
-
+  <div class="field">
+    <%= form.label :password_confirmation %>
+    <%= form.password_field :password_confirmation, :required => true %>
+  </div>
   <div class="actions">
     <%= form.submit %>
   </div>
