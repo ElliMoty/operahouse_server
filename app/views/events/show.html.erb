@@ -1,9 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
+<h2>
   <%= @event.name %>
-</p>
+</h2>
 
 <p>
   <strong>Date:</strong>
@@ -12,12 +11,17 @@
 
 <p>
   <strong>Event space:</strong>
-  <%= @event.event_space_id %>
+  <%= @event.event_space.name %>
 </p>
 
 <p>
   <strong>Duration:</strong>
-  <%= @event.duration %>
+  <%= @event.duration %>mins
+</p>
+
+<p>
+  <strong>Genre:</strong>
+  <%= @event.category.genre %>
 </p>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |

@@ -23,12 +23,17 @@
 
   <div class="field">
     <%= form.label :event_space_id %>
-    <%= form.number_field :event_space_id %>
+    <%= form.select :event_space_id, EventSpace.pluck(:name, :id), :include_blank => true %> 
   </div>
 
   <div class="field">
     <%= form.label :duration %>
     <%= form.number_field :duration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category_id %>
+    <%= form.select :category_id, Category.pluck(:genre, :id), :include_blank => true %>
   </div>
 
   <div class="actions">
