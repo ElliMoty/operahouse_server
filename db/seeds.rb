@@ -33,3 +33,10 @@ s1 = Seat.create :seat_name => 'Stalls', :seat_num => 50, :event_space_id => es1
 s2 = Seat.create :seat_name => 'Circle', :seat_num => 111, :event_space_id => es2.id, :user_id => u2.id
 s3 = Seat.create :seat_name => 'Main', :seat_num => 25, :event_space_id => es4.id, :user_id => u3.id
 s4 = Seat.create :seat_name => 'Stalls', :seat_num => 24, :event_space_id => es2.id, :user_id => u4.id
+
+
+# many-to-many association --> users and events
+u1.events << e2
+u2.events << e1
+u3.events << e3
+u4.events << e4
