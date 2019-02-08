@@ -10,6 +10,19 @@
   </head>
 
   <body>
+    <div class="nav">
+      <% if @current_user.present? %>
+        <nav class="main_nav">
+          <a href="/events">Events</a> |
+          <a href="/event_spaces">Event Spaces</a> |
+          <a href="/categories">Categories</a> |
+          <a href="/users">All Users</a>
+        </nav>
+        <nav class="log_out">
+          <%= link_to("Log Out", login_path, :method => :delete) %>
+        </nav>
+      <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>
