@@ -21,6 +21,16 @@
     <%= form.number_field :seat_num %>
   </div>
 
+  <div class="field">
+    <%= form.label :event_space_id %>
+    <%= form.select :event_space_id, EventSpace.pluck(:name, :id), :include_blank => true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.select :user_id, User.pluck(:name, :id), :include_blank => true %> 
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
