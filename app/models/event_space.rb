@@ -1,0 +1,2 @@
+class EventSpace < ApplicationRecord
+end
