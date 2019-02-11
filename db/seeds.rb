@@ -18,7 +18,7 @@ es6 = EventSpace.create :name => 'Utzon Room', :capacity => 21
 # u1 = User.create :name => 'John', :email => 'john@ga.co', :password => 'chicken'
 # u2 = User.create :name => 'Chicken', :email => 'chicken@ga.co', :password => 'chicken'
 # u3 = User.create :name => 'Turkey', :email => 'turkey@ga.co', :password => 'turkey'
-# u4 = User.create :name => 'Duck', :email => 'duck@ga.co', :password => 'duck'
+c1 = Chicken.create :chickenname => 'chicken', :email => 'chicken@ga.co', :password => 'chicken'
 #
 #
 Event.destroy_all
