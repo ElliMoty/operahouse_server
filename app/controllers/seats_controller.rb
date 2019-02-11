@@ -1,5 +1,5 @@
 class SeatsController < ApplicationController
-  before_action :set_seat, only: [:show, :edit, :update, :destroy]
+  before_action :authorize_as_admin, only: [:destroy, :update, :edit, :create, :new]
 
   # GET /seats
   # GET /seats.json

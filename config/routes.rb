@@ -7,22 +7,22 @@ Rails.application.routes.draw do
   # post '/login' => 'session#create'
   # delete '/login' => 'session#destroy'
   #
-  # resources :seats
-  # resources :event_spaces
-  # resources :events
-  # resources :categories
+  resources :seats
+  resources :event_spaces
+  resources :events
+  resources :categories
   # resources :users
   # Home controller routes.
   root   'home#index'
   get    'auth'            => 'home#auth'
 
    # Get login token from Knock
-   post   'chicken_token'      => 'chicken_token#create'
+   post   'user_token'      => 'user_token#create'
 
   # User actions
-  get    '/chickens'          => 'chickens#index'
-  get    '/chickens/current'  => 'chickens#current'
-  post   '/chickens/create'   => 'chickens#create'
-  patch  '/chicken/:id'       => 'chickens#update'
-  delete '/chicken/:id'       => 'chickens#destroy'
+  get    '/users'          => 'users#index'
+  get    '/users/current'  => 'users#current'
+  post   '/users/create'   => 'users#create'
+  patch  '/user/:id'       => 'users#update'
+  delete '/user/:id'       => 'users#destroy'
 end

@@ -1,5 +1,5 @@
 class EventSpacesController < ApplicationController
-  before_action :set_event_space, only: [:show, :edit, :update, :destroy]
+  before_action :authorize_as_admin, only: [:destroy, :update, :edit, :create, :new]
 
   # GET /event_spaces
   # GET /event_spaces.json

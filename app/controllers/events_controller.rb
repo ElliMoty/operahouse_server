@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :authorize_as_admin, only: [:destroy, :update, :edit, :create, :new, :show]
 
   # GET /events
   # GET /events.json
@@ -10,15 +10,16 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
+    @event = Event.find params[:id]
   end
 
   # GET /events/new
   def new
-    @event = Event.new
   end
 
   # GET /events/1/edit
   def edit
+    @event = Event.find params[:id]
   end
 
   # POST /events
