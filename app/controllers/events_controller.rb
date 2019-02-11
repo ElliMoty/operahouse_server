@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :authorize_as_admin, only: [:destroy, :update, :edit, :create, :new, :show]
+  before_action :authenticate_user, only: [:destroy, :update, :edit, :create, :new, :show]
 
   # GET /events
   # GET /events.json
