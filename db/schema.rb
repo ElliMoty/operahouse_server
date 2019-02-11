@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_08_042321) do
+ActiveRecord::Schema.define(version: 2019_02_11_025812) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,17 @@ ActiveRecord::Schema.define(version: 2019_02_08_042321) do
     t.text "genre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "chickens", force: :cascade do |t|
+    t.string "chickenname", null: false
+    t.string "email", null: false
+    t.string "password_digest"
+    t.string "role", default: "chicken", null: false
+    t.datetime "last_login"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_chickens_on_email"
   end
 
   create_table "event_spaces", force: :cascade do |t|
@@ -44,6 +55,15 @@ ActiveRecord::Schema.define(version: 2019_02_08_042321) do
     t.integer "user_id"
   end
 
+  create_table "pages", force: :cascade do |t|
+    t.string "title"
+    t.string "content"
+    t.boolean "allow_unauth"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["title"], name: "index_pages_on_title", unique: true
+  end
+
   create_table "seats", force: :cascade do |t|
     t.text "seat_name"
     t.integer "seat_num"
@@ -59,6 +79,7 @@ ActiveRecord::Schema.define(version: 2019_02_08_042321) do
     t.text "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
 end

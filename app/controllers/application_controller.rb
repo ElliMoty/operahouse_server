@@ -11,4 +11,14 @@ class ApplicationController < ActionController::API
   # def check_for_login
   #   redirect_to login_path unless @current_user.present?
   # end
+
+  # Include Knock within your application.
+  include Knock::Authenticable
+
+  protected
+
+  # Method for checking if current_user is admin or not.
+  def authorize_as_admin
+    return_unauthorized unless !current_chicken.nil? && current_chicken.is_admin?
+  end
 end
