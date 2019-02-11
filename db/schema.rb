@@ -55,15 +55,6 @@ ActiveRecord::Schema.define(version: 2019_02_11_025812) do
     t.integer "user_id"
   end
 
-  create_table "pages", force: :cascade do |t|
-    t.string "title"
-    t.string "content"
-    t.boolean "allow_unauth"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["title"], name: "index_pages_on_title", unique: true
-  end
-
   create_table "seats", force: :cascade do |t|
     t.text "seat_name"
     t.integer "seat_num"
@@ -79,7 +70,6 @@ ActiveRecord::Schema.define(version: 2019_02_11_025812) do
     t.text "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
 end
