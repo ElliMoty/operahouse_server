@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   # Should work if the current_user is authenticated.
   def index
     render json: {status: 200, msg: 'Logged-in'}
+    # @users = User.all
   end
 
   # Call this method to check if the user is logged-in.
@@ -49,6 +50,7 @@ class UsersController < ApplicationController
   # Adding a method to check if current_user can update itself.
   # This uses our UserModel method.
   def authorize
-    return_unauthorized unless current_user && current_user.can_modify_user?(params[:id])
+    unauthorized = 'You do not have permission to view this currently'
+    return unauthorized unless current_user && current_user.can_modify_user?(params[:id])
   end
 end

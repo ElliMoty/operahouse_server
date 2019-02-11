@@ -7,10 +7,10 @@ Rails.application.routes.draw do
   # post '/login' => 'session#create'
   # delete '/login' => 'session#destroy'
   #
-  # resources :seats
-  # resources :event_spaces
-  # resources :events
-  # resources :categories
+  resources :seats
+  resources :event_spaces
+  resources :events
+  resources :categories
   # resources :users
   # Home controller routes.
   root   'home#index'
