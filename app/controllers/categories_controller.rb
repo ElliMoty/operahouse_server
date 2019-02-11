@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :authorize_as_admin, only: [:destroy, :update, :edit, :create, :new]
+  before_action :authenticate_user, only: [:destroy, :update, :edit, :create, :new]
 
   # GET /categories
   # GET /categories.json
