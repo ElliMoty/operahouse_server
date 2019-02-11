@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 
 <h1>Categories</h1>
 
@@ -15,7 +15,7 @@
       <tr>
         <td><%= category.genre %></td>
         <td><%= link_to 'Show', category %></td>
-        <td><%= link_to 'Edit', edit_category_path(category) %></td>
+
         <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -23,5 +23,12 @@
 </table>
 
 <br>
-
-<%= link_to 'New Category', new_category_path %>
+<div class="nav">
+  <nav class="main_nav">
+    <a href="/events">Events</a> |
+    <a href="/event_spaces">Event Spaces</a> |
+    <a href="/categories">Categories</a> |
+    <a href="/seats">Seats</a> |
+    <a href="/users">All Users</a>
+  </nav>
+</div>

@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 
 <h1>Event Spaces</h1>
 
@@ -17,7 +17,6 @@
         <td><%= event_space.name %></td>
         <td><%= event_space.capacity %></td>
         <td><%= link_to 'Show', event_space %></td>
-        <td><%= link_to 'Edit', edit_event_space_path(event_space) %></td>
         <td><%= link_to 'Destroy', event_space, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -25,5 +24,12 @@
 </table>
 
 <br>
-
-<%= link_to 'New Event Space', new_event_space_path %>
+<div class="nav">
+  <nav class="main_nav">
+    <a href="/events">Events</a> |
+    <a href="/event_spaces">Event Spaces</a> |
+    <a href="/categories">Categories</a> |
+    <a href="/seats">Seats</a> |
+    <a href="/users">All Users</a>
+  </nav>
+</div>
