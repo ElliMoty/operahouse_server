@@ -17,12 +17,12 @@ Rails.application.routes.draw do
   get    'auth'            => 'home#auth'
 
    # Get login token from Knock
-   post   'chicken_token'      => 'chicken_token#create'
+   post   'user_token'      => 'user_token#create'
 
   # User actions
-  get    '/chickens'          => 'chickens#index'
-  get    '/chickens/current'  => 'chickens#current'
-  post   '/chickens/create'   => 'chickens#create'
-  patch  '/chicken/:id'       => 'chickens#update'
-  delete '/chicken/:id'       => 'chickens#destroy'
+  get    '/users'          => 'users#index'
+  get    '/users/current'  => 'users#current'
+  post   '/users/create'   => 'users#create'
+  patch  '/user/:id'       => 'users#update'
+  delete '/user/:id'       => 'users#destroy'
 end
