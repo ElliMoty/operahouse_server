@@ -61,6 +61,12 @@ class CategoriesController < ApplicationController
     end
   end
 
+  # for /categories/:id/events.json
+  def events
+    @category = Category.find params[:id]
+    render json: @category, include: :events
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_category
