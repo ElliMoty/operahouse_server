@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :sections
+  resources :showings
+  resources :bookings
   #
   # root :to => 'session#new'
   #
@@ -25,4 +28,7 @@ Rails.application.routes.draw do
   post   '/users/create'   => 'users#create'
   patch  '/user/:id'       => 'users#update'
   delete '/user/:id'       => 'users#destroy'
+
+  get '/categories/:id/events' => 'categories#events'
+  get '/users/:id/bookings' => 'users#bookings'
 end

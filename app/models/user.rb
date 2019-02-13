@@ -26,6 +26,5 @@ class User < ApplicationRecord
     role == 'admin'
   end
 
-  has_many :seats
-  has_and_belongs_to_many :events
+  has_many :bookings
 end
