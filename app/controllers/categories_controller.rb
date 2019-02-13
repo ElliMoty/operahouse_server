@@ -63,8 +63,8 @@ class CategoriesController < ApplicationController
 
   # for /categories/:id/events.json
   def events
-    @category = Category.find params[:id]
-    render json: @category, include: :events
+    category = Category.find params[:id]
+    render json: category, include: :events
   end
 
   private

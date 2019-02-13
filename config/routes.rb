@@ -30,4 +30,5 @@ Rails.application.routes.draw do
   delete '/user/:id'       => 'users#destroy'
 
   get '/categories/:id/events' => 'categories#events'
+  get '/users/:id/bookings' => 'users#bookings'
 end

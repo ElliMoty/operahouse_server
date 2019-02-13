@@ -40,6 +40,18 @@ class UsersController < ApplicationController
     end
   end
 
+  # for /users/:id/bookings.json
+  def bookings
+    @user = User.find params[:id]
+    def json
+      @user.bookings.each do |b|
+        b.seat
+        b.showing
+      end
+    end
+    render json
+  end
+
   private
 
   # Setting up strict parameters for when we add account creation.
