@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :sections
+  resources :showings
+  resources :bookings
   #
   # root :to => 'session#new'
   #

@@ -10,26 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_12_013302) do
+ActiveRecord::Schema.define(version: 2019_02_13_021900) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.integer "seat_id"
+    t.integer "showing_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "categories", force: :cascade do |t|
     t.text "genre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "chickens", force: :cascade do |t|
-    t.string "chickenname", null: false
-    t.string "email", null: false
-    t.string "password_digest"
-    t.string "role", default: "chicken", null: false
-    t.datetime "last_login"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_chickens_on_email"
   end
 
   create_table "event_spaces", force: :cascade do |t|
@@ -43,36 +40,31 @@ ActiveRecord::Schema.define(version: 2019_02_12_013302) do
   create_table "events", force: :cascade do |t|
     t.text "name"
     t.date "date"
-    t.integer "event_space_id"
     t.integer "duration"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "category_id"
   end
 
-  create_table "events_users", id: false, force: :cascade do |t|
-    t.integer "event_id"
-    t.integer "user_id"
-  end
-
-  create_table "rows", force: :cascade do |t|
-    t.text "letter"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "seats", force: :cascade do |t|
-    t.text "seat_name"
     t.integer "seat_num"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "event_space_id"
-    t.integer "user_id"
+    t.integer "section_id"
   end
 
   create_table "sections", force: :cascade do |t|
     t.text "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer "event_space_id"
+  end
+
+  create_table "showings", force: :cascade do |t|
+    t.integer "event_space_id"
+    t.integer "event_id"
+    t.date "date"
+    t.time "time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

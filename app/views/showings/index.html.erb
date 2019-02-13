@@ -1,0 +1,26 @@
+<h1>Showings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Date</th>
+      <th>Event</th>
+      <th>Event Space</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @showings.each do |showing| %>
+      <tr>
+        <td><%= showing.time.strftime("%H:%M") %></td>
+        <td><%= showing.date.strftime("%e/%m/%Y") %></td>
+        <td><%= showing.event.name %></td>
+        <td><%= showing.event_space.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

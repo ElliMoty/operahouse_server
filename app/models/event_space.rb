@@ -1,4 +1,4 @@
 class EventSpace < ApplicationRecord
-  has_many :events
-  has_many :seats
+  has_many :showings
+  has_many :sections
 end
