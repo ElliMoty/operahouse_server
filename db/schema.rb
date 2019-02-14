@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_14_005208) do
+ActiveRecord::Schema.define(version: 2019_02_14_035301) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,10 @@ ActiveRecord::Schema.define(version: 2019_02_14_005208) do
     t.datetime "updated_at", null: false
     t.integer "category_id"
     t.integer "event_space_id"
+    t.text "image"
+    t.text "subtitle"
+    t.text "short_desc"
+    t.text "long_desc"
   end
 
   create_table "seats", force: :cascade do |t|
