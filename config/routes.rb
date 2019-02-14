@@ -1,19 +1,11 @@
 Rails.application.routes.draw do
 
-  # resources :sections
   resources :bookings
-  #
-  # root :to => 'session#new'
-  #
-  # get '/login' => 'session#new'
-  # post '/login' => 'session#create'
-  # delete '/login' => 'session#destroy'
-  #
   resources :seats
   resources :event_spaces
   resources :events
   resources :categories
-  # resources :users
+
 
   # Home controller routes.
   root   'home#home'
@@ -29,9 +21,11 @@ Rails.application.routes.draw do
   patch  '/user/:id'       => 'users#update'
   delete '/user/:id'       => 'users#destroy'
 
+  # Custom get request pages
   get '/categories/:id/events' => 'categories#events'
   get '/users/:id/bookings' => 'users#bookings'
   get '/seats/:id/bookings' => 'seats#bookings'
 
+  # Custom post request pages
   post '/bookings/create'   => 'bookings#create'
 end
