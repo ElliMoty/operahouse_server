@@ -61,6 +61,13 @@ class SeatsController < ApplicationController
     end
   end
 
+  # for /seats/:id/bookings.json
+  # gives showing and user data per booking
+  def bookings
+    seat = Seat.find params[:id]
+    render json: seat, include: :bookings
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_seat

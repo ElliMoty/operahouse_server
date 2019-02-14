@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :sections
-  resources :showings
+  # resources :sections
   resources :bookings
   #
   # root :to => 'session#new'
@@ -15,6 +14,7 @@ Rails.application.routes.draw do
   resources :events
   resources :categories
   # resources :users
+
   # Home controller routes.
   root   'home#index'
   get    'auth'            => 'home#auth'
@@ -31,4 +31,5 @@ Rails.application.routes.draw do
 
   get '/categories/:id/events' => 'categories#events'
   get '/users/:id/bookings' => 'users#bookings'
+  get '/seats/:id/bookings' => 'seats#bookings'
 end

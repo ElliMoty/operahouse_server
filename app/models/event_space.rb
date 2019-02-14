@@ -1,4 +1,3 @@
 class EventSpace < ApplicationRecord
-  has_many :showings
-  has_many :sections
+  has_many :events
 end
