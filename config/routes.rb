@@ -32,4 +32,6 @@ Rails.application.routes.draw do
   get '/categories/:id/events' => 'categories#events'
   get '/users/:id/bookings' => 'users#bookings'
   get '/seats/:id/bookings' => 'seats#bookings'
+
+  post '/bookings/create'   => 'bookings#create'
 end
