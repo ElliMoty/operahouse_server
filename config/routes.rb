@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   # resources :users
 
   # Home controller routes.
-  root   'home#index'
+  root   'home#home'
   get    'auth'            => 'home#auth'
 
    # Get login token from Knock
