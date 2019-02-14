@@ -1,2 +1,2 @@
-json.extract! seat, :id, :cx, :cy, :r, :seat_num, :section_id
+json.extract! seat, :id, :cx, :cy, :r
 json.url seat_url(seat, format: :json)

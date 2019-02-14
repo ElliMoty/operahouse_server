@@ -6,9 +6,6 @@
     <tr>
       <th>Seat</th>
       <th>Event</th>
-      <th>Date</th>
-      <th>Time</th>
-      <th>Event Space</th>
       <th>User</th>
       <th colspan="3"></th>
     </tr>
@@ -17,11 +14,8 @@
   <tbody>
     <% @bookings.each do |booking| %>
       <tr>
-        <td><%= booking.seat.seat_num %></td>
-        <td><%= booking.showing.event.name %></td>
-        <td><%= booking.showing.date.strftime("%e/%m/%Y") %></td>
-        <td><%= booking.showing.time.strftime("%H:%M") %></td>
-        <td><%= booking.showing.event_space.name %></td>
+        <td><%= booking.seat_id %></td>
+        <td><%= booking.event.name %></td>
         <td><%= booking.user.username %></td>
       </tr>
     <% end %>

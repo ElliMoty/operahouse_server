@@ -14,12 +14,12 @@ c12 = Category.create :genre => 'Theatre'
 
 
 EventSpace.destroy_all
-es1 = EventSpace.create :name => 'Concert Hall', :capacity => 267
-es2 = EventSpace.create :name => 'Joan Sutherland Theatre', :capacity => 150
-es3 = EventSpace.create :name => 'Drama Theatre', :capacity => 54
-es4 = EventSpace.create :name => 'The Studio', :capacity => 40
-es5 = EventSpace.create :name => 'Playhouse', :capacity => 39
-es6 = EventSpace.create :name => 'Utzon Room', :capacity => 21
+es1 = EventSpace.create :name => 'Concert Hall', :capacity => 516
+es2 = EventSpace.create :name => 'Joan Sutherland Theatre', :capacity => 516
+es3 = EventSpace.create :name => 'Drama Theatre', :capacity => 516
+es4 = EventSpace.create :name => 'The Studio', :capacity => 516
+es5 = EventSpace.create :name => 'Playhouse', :capacity => 516
+es6 = EventSpace.create :name => 'Utzon Room', :capacity => 516
 
 
 
