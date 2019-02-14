@@ -3,7 +3,8 @@ class HomeController < ApplicationController
 
 # Public method
 def index
-  render json: { service: 'auth-api', status: 200 }
+  render json: { msg: 'This is the server for the Opera House Client', service: 'auth-api', status: 200 }
+
 end
 
 # Authorized only method
