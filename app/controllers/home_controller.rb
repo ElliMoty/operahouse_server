@@ -8,7 +8,7 @@ end
 
 # Authorized only method
 def auth
-  render json: { status: 200, msg: "Welcome <b>#{current_user.username}</b>"}
+  render json: { status: 200, msg: "Welcome #{current_user.username}"}
 end
 
 def home
