@@ -8,10 +8,10 @@ end
 
 # Authorized only method
 def auth
-  render json: { status: 200, msg: "You are currently Logged-in as #{current_user.username}" }
+  render json: { status: 200, msg: "Hi #{current_user.username}" }
 end
 
-def home 
+def home
 end
 
 end
