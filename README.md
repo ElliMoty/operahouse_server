@@ -18,6 +18,8 @@ The front-end for this server can be found [here](https://github.com/BrendanShie
 - Ruby
 - Ruby on Rails
 - HTML
+- JWT
+- Knock
 
 ## For the future
 This project is still a work in progress, however as of now the back-end is mostly completed. The remaining work needed is more seed data and a tighter grip on user access vs public access.
